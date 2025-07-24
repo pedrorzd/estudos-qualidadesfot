@@ -1,0 +1,216 @@
+*Definição de qualidade de software*:
+
+
+Em contexto de desenvolvimento:
+
+A qualidade de software, se dá no momento em que o software segue os requisitos funcionais e não funcionais, documentados na inicio da construção do software, mas não se limitando a isso.
+Um software de qualidade, além de seguir os requisitos documentados, também deve ser bem construído, suportar melhorias, não apresentar erros de forma constante e também, ter facil manutenibilidade.
+
+
+Observações:
+O que são requisitos funcionais e não funcionais? Qual a importância deles?
+
+Requisitos funcionais, são aqueles que ditam o funcionamento do software, como ele deve se comportar, o que deve fazer e como fazer.
+Os requisitos não funcionais são aqueles que não são obrigatórios mas são importantes de serem implementados durante o desenvolvimento do software.
+
+Eles tem suma importância em todo o ciclo de vida de um software, dado que eles seram os guias para o desenvolvimento do mesmo, logo servirão
+de base para o QA fazer os testes e verificar se o funcionamento está de acordo com o esperado e planejado.
+A documentação de requisitos auxilia no caso de uso do software, indicando a forma correta de se usar e os procedimentos à serem seguidos.
+Uma boa documentação de requisitos evita retrabalho, ou seja, os custos do software e também ajudam a evitar conflitos internos entre equipes devido ao software estar ou não seguindo o que foi acordado e está documentado. 
+
+
+Qualidade de software no contexto de usuário:
+
+A experiência do usuário é um fator determinante para a construção e, dependendo do caso, correção do software.
+
+Esse aspecto da experiência do usuário é chamado *usabilidade*.
+Levando em conta a usabilidade, o usuário, ou aquele que irá representa-lo durante a fase de teste do software, busca respostas para as seguintes perguntas:
+
+-- As funcionalidades estão disponiveis e são executadas de forma eficiente?
+-- O software funciona corretamente, sem imprevistos?
+-- Apresentando imprevistos, qual a reação do software?
+-- Ele é seguro? Pessoas sem as credenciais necessárias conseguem executar ações indevidas?
+-- Qual a facilidade de uso? Requer muito treinamento para se tornar usável?
+-- É fácil de integrar com outros sistemas existentes?
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+*Medindo a qualiade de um software:*
+
+A norma ISO/IEC 9126(NBR 13596) define seis categorias de qualidade, que por sua vez são divididas em subcategorias, sendo elas:
+
+Funcionalidade:
+Satisfaz as necessidades para que foi projetado?
+
+-- Adequação:
+ ° Propõe-se a fazer o que é apropriado para seu contexto?
+
+--Acurácia:
+ ° Gera os resultados esperados para seu uso?
+
+--Interoperabilidade:
+ ° É capaz de interagir/se integrar com outros sistemas especificados?
+
+--Segurança:
+ ° Evita o acesso não autorizado, acidental ou deliberado?
+
+-- Conformidade:
+ ° Está de acordo com as normas e conveções previstas?
+
+
+-----------
+
+Confiabilidade:
+O desempenho do software se mantém ao longo do tempo?
+
+-- Maturidade:
+° Com que frequência o software apresenta falhas?
+
+-- Tolerância a falhas:
+° Ocorreu uma falha, o que acontece?
+
+-- Recuperabilidade:
+ ° É possível recuperar os dados depois de uma falha?
+
+----------
+
+Usabilidade:
+O quão fácil é usar o software?
+
+-- Intelegibilidade:
+ ° É fácil entender os conceitos utilizados no software?
+
+-- Apreensibilidade:
+ ° É fáciç de aprender a usar?
+
+ -- Operacionalidade:
+ ° É fácil de operar e controlar a operação?
+
+--------
+
+Eficiência:
+É compatível com o nivel de desempenho requerido e esperado?
+
+-- Tempo de resposta
+-- Quantidade de recurso
+
+-------
+
+Manutenibilidade:
+Fornece facilidade para correções e atualizações?
+
+-- Analisabilidade:
+ ° É fácil de encontrar a falha quando ocorre?
+
+-- Modificabilidade:
+ ° Fácil de moficar e remover defeitos?
+
+-- Estabilidade:
+ ° Há grandes riscos de bugs quando alterações são feitas?
+
+-- Testabilidade:
+ ° Qual a facilidade para executar testes no sfotware?
+
+--------
+
+Portabilidade:
+É posível utilizar o produto em diversas plataformas?
+
+--Adaptabilidade:
+ ° É fácil de adaptar para outros ambientes dem aplicar outras ações ou meios?
+
+ -- Instalação:
+ ° Fácil de instalar em outros ambientes?
+
+-- Capacidade de substituição:
+ ° Qual a facilidade para ele ser substituído por outro software?
+
+-- Conformidade:
+ ° Está de acordo com os padrões ou convenções de portabilidade?
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+*Processo de avaliação de qualidade*
+
+Durante o processo de avaliação da qualidade de um software, são observadas algumas características:
+
+-- Repetitível:
+ - Resultados iênticos são obtidos ao testar várias vezes utilizando os mesmo parâmetros e o mesmo avaliador.
+
+-- Reprodutível:
+ - Resultados iênticos são obtidos ao testar várias vezes utilizando os mesmo parâmetros com avaliadores diferentes
+
+-- Objetivo:
+ - Os resultados da avaliação devem ser feitos com base em evidências e fatos, sem opiniões pessoais.
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+*Tipos de teste*
+
+Para verificar a qualidade de um software, pode-se fazer várias formas de teste, buscando resultados, erros e comportamentos diferentes. Alguns tipos de testes são:
+
+-- Usabilidade:
+Para verificar a questão de usabilidade de um software.
+Possibilita detectar todas as ações do usuário para saber suas preferências.
+
+Problemas comuns:
+
+Irrelevância: a aplicação apresenta itens irrelevantes.
+Inadequação: abreviações usadas sem contextualização prévia.
+Resposta inesperada.
+Quantidade de cliques: muitos cliques necessários para executar uma ação ou obter algum resultado.
+
+Etapas:
+
+-Planejamento:
+Consiste em determinar o objetivo do teste e a metodologia que será utilziada.
+°Qual o objetivo?
+°Onde o teste será executado?
+°Quais as ferramentas necessárias?
+
+-Preparação:
+O usuário deve receber um roteiro explicando quais passos devem ser seguindos e um breve treinamento para realizar as operações
+utilizando alguma ferramenta se necessário.
+
+-Execução:
+Não interferir no teste durante a execução.
+Documentar as dificuldades apresentas pelo usuário.
+Anotar as sugestões.
+
+-Análise:
+Relatar os problemas encontrados, melhorias sugeridas, gravidade e prioridade para solucionamento.
+
+Ferramentas utilizadas:
+
+Loop11, Ethnio, Morae
+
+--------
+
+-- Confiabilidade:
+
+
+
+--------
+-- Portabilidade
+-- Acessibilidade
+-- Desempenho
+-- Estresse
+-- Contingência
+-- Regressão
+-- Requisitos
+-- Controle
+-- Aceitação
+-- Carga
+-- Conformidade
+-- Segurança
+
+
+
+
+
+
+
+
+
