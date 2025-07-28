@@ -129,7 +129,7 @@ Portabilidade:
  ° Está de acordo com os padrões ou convenções de portabilidade?
 
 
------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 
 *Processo de avaliação de qualidade*
 
@@ -149,8 +149,8 @@ Durante o processo de avaliação da qualidade de um software, são observadas a
 
 *Tipos de teste*
 
-funcionais e não funcionais
-
+Para entrar nesse tópico, é preciso esclarecer os tipos de testes que podemos fazer, são eles funcionais e não funcionais.
+Os testes funcionais testam as funções do sistema e verificiam se ele atendem aos requisitos especificados. Já os testes não funcionais avaliam aspectos como desempenho, segurança, usabilidade e outros atributos de qualidade.
 
 Para verificar a qualidade de um software, pode-se fazer várias formas de teste, buscando resultados, erros e comportamentos diferentes. Alguns tipos de testes são:
 
@@ -166,7 +166,6 @@ Resposta inesperada.
 Quantidade de cliques: muitos cliques necessários para executar uma ação ou obter algum resultado.
 
 Etapas:
-
 -Planejamento:
 Consiste em determinar o objetivo do teste e a metodologia que será utilziada.
 °Qual o objetivo?
@@ -184,6 +183,9 @@ Anotar as sugestões.
 
 -Análise:
 Relatar os problemas encontrados, melhorias sugeridas, gravidade e prioridade para solucionamento.
+
+Quando deve ser feito?
+Durante o desenvolvimento e antes da entrega do produto.
 
 Ferramentas utilizadas:
 
@@ -220,6 +222,9 @@ Determina se o software atente os requisitos de confiabilidade definido pelos us
 Verificia a existência de pontos fracos.
 Analisa até que ponto o software suporta falhas.
 
+Quando deve ser feito?
+Após a fazse de desenvolvimento funcional do software.
+
 Ferramentas utilizadas:
 Apache JMeter para carga e desempenho de aplicações web.
 Selenium para testes automatizados em navegadores.
@@ -248,6 +253,9 @@ Esse tipo de teste determina se o software pode ser portado para cada um dos amb
 -Resolução do monitor
 -Navegadores e SO's suportados.
 
+Quando deve ser feito?
+Após o sistema estar funcional e testado (final da fase de desenvolvimento).
+
 Ferramentas:
 IETester, Windows XP Mode, VirtualBox, VMware Player
 
@@ -273,8 +281,10 @@ Ao descobrir e corrigir as falhas de acessibilidade, é possível:
 -Que todo usuário PCD ou não, terá acesso à aplicação.
 -Diferencia o software dos demais, sem acessibilidade.
 
-Ferramentas:
+Quando fazer o teste?
+Deve ser feito desde as fases iniciais do desenvolvimento e de forma contínua até o lançamento e além
 
+Ferramentas:
 Seguir a checklist do WCAG1.0, AChecker, Wave Toolbar, NVDA.
 
 ---------
@@ -301,6 +311,9 @@ Vantagens:
 Melhora a experiência do usuário final
 Ajuda a planejar a escalabilidade
 Valida a infraestrutura
+
+Quando fazer o teste?
+Deve ser feito antes do lançamento do software e após grandes mudanças no software.
 
 Ferramentas:
 JMeter, Gatling, Locust
@@ -329,6 +342,9 @@ Vantagens:
 Previne falhas ao receber grande volume de usuários.
 Garante que o sistema não corrompa dados em situações críticas.
 Testa a resiliência da aplicação e servidores.
+
+Quando fazer o teste?
+Deve ser feito antes do lançamento do software e após grandes mudanças no software.
 
 Ferramentas:
 Apache JMeter, k6, locust, gatling
@@ -360,14 +376,13 @@ Vantagens:
 -Garante que os backups estão utilizáveis
 -Reduz riscos operacionais e financeiros
 
+Quando fazer o teste?
+Após a implementação do plano de contingência, periodicamente e após mudanças relevantes na infra ou arquitetura.
+
 Ferramentas:
-
 Ferramentas de Backup e Restore: Veeam, Bacula, Acronis, AWS Backup
-
 Soluções de Failover/Alta Disponibilidade: Zabbix, Keepalived, HAProxy, AWS Route 53
-
 Sistemas de Monitoramento e Alerta: Prometheus, Grafana, Datadog, Nagios
-
 Soluções de Disaster Recovery: Azure Site Recovery, AWS Disaster Recovery
 
 ---------
@@ -443,13 +458,6 @@ Ferramentas:
 
 ---------
 
--- Controle
-
-
-
-
----------
-
 -- Aceitação
 Teste para veirficar se o software atente as expectativas do usuário final, executado no final do ciclo de desenvolvimento e tem o objetivo de aprovar ou não o uso em produção.
 
@@ -467,7 +475,6 @@ Realizado internamente pela equipe de cliente e devs
 -Teste Beta
 Realizado pelos usuários, antes do lançamento oficial do software
 
-
 Pontos a serem analisados:
 -Fluxo principais de uso
 -Regras de negócio
@@ -484,6 +491,9 @@ Vantagens:
 -Garante que o software entrega valor real ao usuário.
 -Reforça o alinhamento entre a equipe técnica e o cliente
 -Reduz o risco de insatisfação
+
+Quando fazer o teste?
+Deve ser feito ao final do desenvolvimento, antes da entrega ou lançamento do sistema.
 
 Ferramentas:
 -Cucumber: Automatiza testes de aceitação com linguagem Gherkin (Given/When/Then).
@@ -511,6 +521,9 @@ Vantagens:
 -Indentifica limitações técnicas anteriormente
 -Melhora a experiência do usuário
 
+Quando fazer o teste?
+Deve ser feito antes do lançamento ou após mudanças importantes, para garantir que o sistema suporta o volume esperado de usuários ou dados.
+
 Ferramentas:
 JMeter, k6, Gatling
 
@@ -532,6 +545,9 @@ Etapas de teste:
 
 Vantagens:
 -Garantir que o produto está de acordo com as normas, evitando multas.
+
+Quando fazer o teste?
+Deve ser feito antes do lançamento e sempre que houver mudanças que afetem regras, normas ou legislações aplicáveis ao sistema.
 
 Ferramentas:
 -SonarQube – Análise de código com regras de conformidade.
@@ -564,6 +580,9 @@ Envia dados inválidos ou inesperados para tentar forçar falhas de segurança.
 
 Vantagens:
 -Garantir a segurança tanto do usuário quanto da empresa.
+
+Quando fazer o teste?
+Deve ser feito antes do lançamento, após grandes alterações e periodicamente em sistemas em produção.
 
 Ferramentas:
 -OWASP ZAP
