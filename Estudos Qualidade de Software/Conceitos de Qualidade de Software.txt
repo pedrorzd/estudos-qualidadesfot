@@ -149,6 +149,9 @@ Durante o processo de avaliação da qualidade de um software, são observadas a
 
 *Tipos de teste*
 
+funcionais e não funcionais
+
+
 Para verificar a qualidade de um software, pode-se fazer várias formas de teste, buscando resultados, erros e comportamentos diferentes. Alguns tipos de testes são:
 
 -- Usabilidade:
@@ -189,22 +192,389 @@ Loop11, Ethnio, Morae
 --------
 
 -- Confiabilidade:
+O objetivo desse teste é garantir a integridade dos dados trafegados pelo software, monitorando e avaliando a capacidade que a aplicação tem de concluir suas operações com sucesso.
 
+Pontos a serem analisados:
 
+-Recuperabilidade: o sfotware é capaz de voltar a funcionar após uma falha?
+-Maturidade: qual a frequência de falhas na aplicação?
+-Tolerância a falhas: como o software se comporta após uma falha?
+-Conformidade: a aplicação está de acordo com as normas e convenções?
+
+Etapas do teste:
+
+- Estabelecer metas de confiabilidade:
+O objetivo é determinar qual será o desempenho satisfatório do software.
+
+-Desenvolver perfis operacionais:
+Definir qual tipo de usuário irá reaizar os testes, descrevendo exatamente o que cada um irá fazer e os resultados esperados
+
+-Planejamento e execução dos testes:
+Levantar os dados necessários para execução dos testes, verificar as exigências de requisitos, atribuir responsabilidades de acordo com os perfis operacionais e por fim registrar as informações obtidas ao longo do teste.
+
+-Usar os resultados para tomar decisões:
+Analisar os resultados e definir qual será a priorização da solução para os problemas apresentados.
+
+Vantagens:
+Determina se o software atente os requisitos de confiabilidade definido pelos usuários.
+Verificia a existência de pontos fracos.
+Analisa até que ponto o software suporta falhas.
+
+Ferramentas utilizadas:
+Apache JMeter para carga e desempenho de aplicações web.
+Selenium para testes automatizados em navegadores.
 
 --------
+
 -- Portabilidade
+Processo para medir a facilidade com que um software pode ser transferido de um ambiente para outro, por exemplo, Mobile e Desktop.
+
+Pontos a serem analisados:
+-O Software foi ou está sendo desenvolvido seguindo os requisitos de portabilidade?
+-Confirmar se a integração entre todos os componentes foi realizada.
+-Analisar se o ambiente está preparado para a execução do teste.
+
+Etapas:
+-Preparação do ambiente.
+-Instrução ao usuário sobre o que deve ser feito
+-Execução do teste.
+-Análise dos registros obtidos.
+-Documentar as falhas, riscos e possíveis melhorias.
+
+Vantagens:
+Esse tipo de teste determina se o software pode ser portado para cada um dos ambientes especificados pelo usuário, além de avaliar características fundamentais para sua correta utilização, como:
+-Espaço necessário em disco.
+-Velocidade do processador
+-Resolução do monitor
+-Navegadores e SO's suportados.
+
+Ferramentas:
+IETester, Windows XP Mode, VirtualBox, VMware Player
+
+--------
+
 -- Acessibilidade
+
+Esse teste tem como objetivo, garantir que o software poderá ser utilizado por qualquer usuário, inclusive aqueles que possuem algum tipo de deficiência fisíca. Esse é um tema tão importante que o governo brasileiro criou o e-Mag, a W3C também criou o WAI. Diante dessas padronizações, algumas características são fundamentais quando se trata de acessibilidade de uma aplicação.
+
+Pontos a serem analisados:
+-Perceptível:
+A informação e os componentes da interface da applicação deme ser apresentados de modo que o usuário possa saber o que é exibido na tela.
+-Operável:
+A interface do software não pode pode exigir uma interação que o usuário não consiga executar.
+-Compreensível:
+As informações da interface da aplicação devem ser de fácil compreensão.
+-Robusto:
+O conteúdo precisa ser sólido o suficiente para que ele possa ser interpretado por diferentes usuários, ferramentas e teccnologias assistivas.
+
+Vantagens do teste:
+Ao descobrir e corrigir as falhas de acessibilidade, é possível:
+-Disponibilizar o software para mais clientes.
+-Que todo usuário PCD ou não, terá acesso à aplicação.
+-Diferencia o software dos demais, sem acessibilidade.
+
+Ferramentas:
+
+Seguir a checklist do WCAG1.0, AChecker, Wave Toolbar, NVDA.
+
+---------
+
 -- Desempenho
+Avalia como um sistema se comporta em termos de velocidade, escalabilidade, estabilidade e capacidade de resposta, especialmente sob carga e estresse. Garante que o sistema atenda os requisistos de desempenho definidos.
+
+Pontos a serem analisados:
+-Tempo de resposta para requisições
+-Throughput(vazão), quantidade de transações por segundo
+-Uso de recursos, como CPU, memória, rede...
+-Estabildade, como o sistema se comporta ao longo do tempo
+-Escalabilidade, capacidade de mantar o desempenho conforme o numero de usuários aumenta.
+
+Etapas:
+-Planejamento
+-Configuração do ambiente
+-Execução do teste
+-Monitoramento
+-Análise dos resultados
+-Documentar as falhas, riscos e possíveis melhorias.
+
+Vantagens:
+Melhora a experiência do usuário final
+Ajuda a planejar a escalabilidade
+Valida a infraestrutura
+
+Ferramentas:
+JMeter, Gatling, Locust
+
+---------
+
 -- Estresse
+É um tipo de teste que verifica como um sistema se comporta em condições extremas, ou seja, além do limite esperados de carga, processamento e volume de dados. Serve para ver até onde o sistema pode ir antes de falhar, indentificar vulnerabilidades que não aparecem em condições normeais e verifica se o sistema falha de forma controlada e segura
+
+Pontos a serem analisados:
+
+-Ponto de falha, quando e como o sistema começa a falhar.
+-Comportamento sob falha: Travamentos, lentidão, erros de sistema.
+-Tempo de recuperação: O sistema volta ao normal após a sobrecarga?
+-Alerta e logs: O sistema gera alertas adequados sobre a falha?
+
+Etapas:
+-Planejamento
+-Definir o numero de sobrecarga
+-Preparar o ambiente
+-Executar os testes
+-Analisar os resultados
+-Documentar as falhas, riscos e possíveis melhorias.
+
+Vantagens:
+Previne falhas ao receber grande volume de usuários.
+Garante que o sistema não corrompa dados em situações críticas.
+Testa a resiliência da aplicação e servidores.
+
+Ferramentas:
+Apache JMeter, k6, locust, gatling
+
+---------
+
 -- Contingência
+Tipo de teste que verifica se os planos de recuperação e continuidade do sistema funcionam corretamente em caso de falhas críticas, interrupções ou desastres. Espera que o sistema consiga se recuperar rapidamante após uma falha, verifica os planos de backup failover e recuperação e avalia a capacidade da equipe de executar os procedimentos de segurança.
+
+Pontos a serem analisados:
+
+-Recuperação do sistema após quedas
+-Execução dos procedimentos de backup
+-Falha controlada de servidores ou serviços (ex: desligar uma máquina para testar failover)
+-Troca para ambiente de contingência
+
+Etapas:
+
+-Planejamento
+-Execução dos cenários de falha
+-Ativação do plano de contingência
+-Monitoramento
+-Restauração de ambiente
+-Análise e documentação dos resultados
+
+Vantagens:
+
+-Evitar surpresas em falhas reais
+-Garante que os backups estão utilizáveis
+-Reduz riscos operacionais e financeiros
+
+Ferramentas:
+
+Ferramentas de Backup e Restore: Veeam, Bacula, Acronis, AWS Backup
+
+Soluções de Failover/Alta Disponibilidade: Zabbix, Keepalived, HAProxy, AWS Route 53
+
+Sistemas de Monitoramento e Alerta: Prometheus, Grafana, Datadog, Nagios
+
+Soluções de Disaster Recovery: Azure Site Recovery, AWS Disaster Recovery
+
+---------
+
 -- Regressão
+Teste funcional que tem o objetivo de verificar se uma alteração no software, como correção de bugs ou novas funcionalidades, causaram impactos inesperatos em partes já existentes e que anteriormente estavam funcionando, além de evitar a reintrodução de bugs já corrigidos anteriormente.
+
+Quando executar esse teste?
+-Após qualquer alteração no código
+-Após alteração na arquitetura, banco de dados, APIs etc
+-Em cada ciclo de integração continua ou nova versão.
+
+Pontos a serem analisados:
+-Funcionalidades já testadas anteriormente
+-Casos de uso que podem ser afetados indiretamente
+-UI, API, relatorios, fluxos de negocios...
+-Comportamento críticos que já ocorreram
+
+Tipos de teste de regressão:
+-Total
+-Parcial
+-Incremental
+-Automatizado(ideal para CI/CD)
+
+Etapas de teste:
+-Indentificar as mudanças
+-Selecionar casos de teste
+-Execução
+-Análise de resultados
+-Documentação de resultados obtidos
+
+Vantagens:
+-Etiva retrabalho
+-Melhora a qualidade do software a cada release
+-Permite entregas contínuas mais confiáveis
+
+Ferramentas:
+Automação:
+Selenium, JUnit/TestNG, Cypress
+
+Para CI:
+Jenkins, GitHub Actions, GitLab CI/CD, CircleCI
+
+---------
+
 -- Requisitos
+Verifica se o sistema atende corretamente aos requisitos especificados, ou seja, garante que o que foi solicitado pelo cliente, usuário ou stackholder, foi corretamente implementado e está funcionando. Teste para confirmar se o software está atendendo à expectativa do cliente, detectar falha ou omissões nos requisitos, servir como base para aceitação do sistema.
+
+Pontos a serem analisados:
+-Requisitos funcionais
+-Requisitos não funcionais
+-Requisitos legais e normativos
+-Requisitos de interface
+-Requisitos de negócio
+
+Vantagens:
+-Garante que o produto final corresponde ao que foi pedido
+-Reduz retrabalho causado por mal entendimento
+-Melhora a comunicação entre equipes
+-Facilita a aceitação do cliente
+
+Etapas:
+-Análise de requisito
+-Criação de caso de teste
+-Associação do caso de teste com requisito
+-Execução
+-Análise de resultados
+-Documentação dos resultados obtidos
+
+Ferramentas:
+-Jira + Xray
+-Azure DevOps
+
+---------
+
 -- Controle
+
+
+
+
+---------
+
 -- Aceitação
+Teste para veirficar se o software atente as expectativas do usuário final, executado no final do ciclo de desenvolvimento e tem o objetivo de aprovar ou não o uso em produção.
+
+Tipos:
+-UAT, validado pelos usuários finais
+Foco na usabilidade, processos de negócio e regras funcionais
+
+-Teste de Aceitação do Cliente:
+Focado no contrato ou escopo acordado
+Confirma se tudo o que foi solicitado foi entregue
+
+-Teste Alfa
+Realizado internamente pela equipe de cliente e devs
+
+-Teste Beta
+Realizado pelos usuários, antes do lançamento oficial do software
+
+
+Pontos a serem analisados:
+-Fluxo principais de uso
+-Regras de negócio
+-Navegação e usabilidade
+-Mensagens e validações
+
+Etapas:
+-Planejamento
+-Preparação do ambiente
+-Execução dos testes
+-Análise dos resultados e documentação dos mesmos
+
+Vantagens:
+-Garante que o software entrega valor real ao usuário.
+-Reforça o alinhamento entre a equipe técnica e o cliente
+-Reduz o risco de insatisfação
+
+Ferramentas:
+-Cucumber: Automatiza testes de aceitação com linguagem Gherkin (Given/When/Then).
+-Confluence: Para escrever critérios de aceitação em linguagem de negócio.
+
+---------
+
 -- Carga
+Teste de desempenho que verifica como o sistema se comporta quando submetido a uma quantidadee esperada de usuários ou transações simultâneas. Serve para avaliar se o sistema suporta a carga esperada de usuários, verifica o tempo de resposta, indentifica os gargalos do sistema.
+
+Pontos a serem analisados:
+-Tempo de resposta
+-Consumo de banda
+-Quantidade de requisições
+
+Etapas de teste:
+-Planejamento
+-Criação de casos de teste
+-Preparação do ambiente
+-Execução
+-Análise dos resultados e documentação dos mesmos
+
+Vantagens:
+-Garante que o app vai suportar picos de usuários
+-Indentifica limitações técnicas anteriormente
+-Melhora a experiência do usuário
+
+Ferramentas:
+JMeter, k6, Gatling
+
+---------
+
 -- Conformidade
+Verifica se o sistema ou software está seguindo regras, padrões, normas técnicas, regulatórias ou contratuais estabelecidas.
+
+Pontos a serem analisados:
+-Aderência a leis de proteção de dados
+-Cumprimento de requisitos regulatórios do setor
+-Uso de padrões de codificação segura
+
+Etapas de teste:
+-Planejamento
+-Preparação do ambiente
+-Execução
+-Análise dos resultados e documentação dos mesmos
+
+Vantagens:
+-Garantir que o produto está de acordo com as normas, evitando multas.
+
+Ferramentas:
+-SonarQube – Análise de código com regras de conformidade.
+-OWASP Dependency-Check – Verifica bibliotecas com vulnerabilidades conhecidas.
+-Checklists de auditoria – ISO, PCI, LGPD.
+-Ferramentas de GRC (Governança, Risco e Conformidade): RSA Archer, OneTrust.
+
+---------
+
 -- Segurança
+Avalia se o sistema é resistente a ameaças e ataques, e se protege adequadamente dados, usuários e recursos contra acessos não autorizados Serve para vulnerabilidades no código, banco de dados, rede, autenticação, APIs, prevenir invasões, perda de dados ou ataques como SQL Injection, validar permissões de usuários, autenticação, criptografia e logs de auditoria além de garantir que dados sensíveis estejam protegidos.
+
+Pontos a serem analisados:
+-Validação de entrada (input validation)
+-Controle de acesso e autenticação
+-Criptografia de dados em trânsito e em repouso
+-Permissões e níveis de acesso
+-Segurança em APIs e integrações
+-Testes de ataques simulados (pen test, fuzzing, etc.)
+
+Tipos de teste:
+-Testes estáticos
+Analisam o código-fonte sem executá-lo.
+-Testes dinâmicos
+Testam o sistema em execução, simulando ataques reais.
+-Testes de penetração
+Simula ataques reais para encontrar falhas exploráveis.
+-Testes de Fuzzing
+Envia dados inválidos ou inesperados para tentar forçar falhas de segurança.
+
+Vantagens:
+-Garantir a segurança tanto do usuário quanto da empresa.
+
+Ferramentas:
+-OWASP ZAP
+-Burp Suite
+-Nmap
+-Nessus
+-Metasploit
+-Checkmarx, Veracode, Fortify (empresariais)
+-Kali Linux – Conjunto completo de ferramentas de segurança
+
+
 
 
 
